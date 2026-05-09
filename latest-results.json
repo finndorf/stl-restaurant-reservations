@@ -1,0 +1,13 @@
+{
+  "checked_at": null,
+  "scan_type": "init",
+  "fridays": [],
+  "restaurants": [
+    {"name": "Wright's Tavern", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
+    {"name": "Louie on DeMun", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
+    {"name": "The Mainlander", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
+    {"name": "Robin Restaurant", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
+    {"name": "The Crossing", "platform": "OpenTable", "availability": [], "notes": "Awaiting first scan"},
+    {"name": "Acero", "platform": "OpenTable", "availability": [], "notes": "Awaiting first scan"}
+  ]
+}

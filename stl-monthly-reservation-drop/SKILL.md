@@ -1,27 +1,51 @@
 ---
 name: stl-monthly-reservation-drop
-description: Monthly alert when Wrights Tavern and Mainlander drop new reservations on the 1st
+description: Monthly alert when Wright's Tavern (12:01 AM) or The Mainlander (noon) drop new reservations on the 1st
 ---
 
-It is the 1st of the month. Wrights Tavern and The Mainlander in St. Louis have just released reservations for the entire next calendar month on Resy. Act quickly as these sell out within minutes.
+It's the 1st of the month. A specific St. Louis restaurant just released its next month of Resy reservations. The routine prompt names which venue to check (Wright's or Mainlander). These sell out in minutes — act fast.
 
-**Wrights Tavern** (Resy)
+**Wright's Tavern** (Resy) — drops 12:01 AM on the 1st, 14 tables total
 URL: https://resy.com/cities/clayton-mo/venues/wrights-tavern
-- Releases at 12:01 AM on the 1st
-- Only 14 tables total, goes extremely fast
-- Look for: party of 2 or 4, Fridays, 6:30-7:30 PM
 
-**The Mainlander** (Resy)
+**The Mainlander** (Resy) — drops noon on the 1st, 25 Supper Club seats
 URL: https://resy.com/cities/st-louis-mo/venues/mainlander
-- Releases at noon on the 1st
-- 25 seats in the Supper Club, sells out almost instantly
-- Look for: party of 2 or 4, Fridays, 6:30-7:30 PM
 
 **Steps:**
-1. Use Claude in Chrome browser tools to open each Resy page
-2. Search for Friday availability in the newly released month, party of 2 and 4, 6:30-7:30 PM
-3. Report any available slots
+1. Identify the target month (the month that was just released). It is the 1st of THIS month, so the released month is the NEXT calendar month.
+2. List every Friday in that target month.
+3. For each Friday, check the venue page with `?date=YYYY-MM-DD&seats=2` and `&seats=4` query strings. Use WebFetch first; if the page returns shell HTML, fall back to WebSearch.
+4. Filter to 6:30 PM – 7:30 PM time window.
 
-**Output:** List every Friday with availability. Flag urgency. Remind Cam to book immediately.
+**Output — write `latest-results.json` at the repo root:**
+```json
+{
+  "checked_at": "2026-06-01T05:01:00Z",
+  "scan_type": "monthly_drop",
+  "venue": "Wright's Tavern",
+  "target_month": "2026-07",
+  "fridays": ["2026-07-03", "2026-07-10", "2026-07-17", "2026-07-24", "2026-07-31"],
+  "restaurants": [
+    {
+      "name": "Wright's Tavern",
+      "platform": "Resy",
+      "availability": [
+        {"date": "2026-07-10", "party": 2, "times": ["6:45 PM"], "booking_url": "https://resy.com/cities/clayton-mo/venues/wrights-tavern?date=2026-07-10&seats=2"}
+      ],
+      "notes": ""
+    }
+  ]
+}
+```
 
-Note: Mainlander slots may not appear until noon. If before noon, note and recommend checking back.
+**Commit and push:**
+```
+git add latest-results.json
+git -c user.email="agent@stl-reservations" -c user.name="STL Reservations Agent" commit -m "monthly drop $(date -u +%Y-%m-%d) — <venue>"
+git push origin main
+```
+
+**Email Cam IMMEDIATELY if any availability is found:**
+Use the Gmail connector. Send to cam.conway@gmail.com with subject `"🚨 <Venue> — book now"` and a plain-text body listing each open Friday with its `booking_url`. Urgency is the whole point — these sell out in minutes.
+
+If nothing is open: still write the JSON file with empty `availability`, but do NOT email.

@@ -3,26 +3,51 @@ name: stl-friday-reservation-check
 description: Weekly check for Friday night openings at 6 St. Louis restaurants
 ---
 
-Check for Friday night restaurant reservations at 6 St. Louis, Missouri restaurants. The goal is to find a table for 2 or 4 people on any upcoming Friday between 6:30 PM and 7:30 PM.
+Check for Friday night dinner availability at 6 St. Louis restaurants. Look for a table for 2 or 4 people on any of the next 4 Fridays between 6:30 PM and 7:30 PM.
 
-**Restaurants to check:**
-1. Wrights Tavern (WRIGHT) on Resy: https://resy.com/cities/clayton-mo/venues/wrights-tavern
-2. Louie on DeMun (LOUIE) on Resy: https://resy.com/cities/clyt/louie
-3. The Mainlander on Resy: https://resy.com/cities/st-louis-mo/venues/mainlander
-4. Robin Restaurant on Resy: https://resy.com/cities/st-louis-mo/venues/robin-restaurant
-5. The Crossing on OpenTable: https://www.opentable.com/the-crossing-clayton
-6. Acero on OpenTable: https://www.opentable.com/acero-saint-louis
+**Restaurants:**
+1. Wright's Tavern (Resy): https://resy.com/cities/clayton-mo/venues/wrights-tavern
+2. Louie on DeMun (Resy): https://resy.com/cities/clyt/louie
+3. The Mainlander (Resy): https://resy.com/cities/st-louis-mo/venues/mainlander
+4. Robin Restaurant (Resy): https://resy.com/cities/st-louis-mo/venues/robin-restaurant
+5. The Crossing (OpenTable): https://www.opentable.com/the-crossing-clayton
+6. Acero (OpenTable): https://www.opentable.com/acero-saint-louis
 
-**What to check:**
-- Check next 4 upcoming Fridays
+**How to check:**
+For each restaurant URL, use WebFetch and WebSearch to gather availability. Resy and OpenTable expose deep-link URLs that can be parameterized — for Resy, append `?date=YYYY-MM-DD&seats=2` (or `seats=4`). When WebFetch returns shell HTML, fall back to WebSearch with the venue name plus the target date and "available" to surface third-party indicators.
+
+**Criteria:**
+- Next 4 upcoming Fridays from today
 - Party of 2 first, then party of 4
-- Time window: 6:30 PM to 7:30 PM only
-- Use Claude in Chrome browser tools
+- Time window: 6:30 PM – 7:30 PM only
 
-**Release schedule:**
-- Wrights Tavern: 1st of month at 12:01 AM
-- Mainlander: 1st of month at noon
-- Robin: Rolling 60-day window
-- Louie, The Crossing, Acero: Standard rolling
+**Output — write `latest-results.json` at the repo root with this exact shape:**
+```json
+{
+  "checked_at": "2026-05-09T13:00:00Z",
+  "scan_type": "weekly",
+  "fridays": ["2026-05-15", "2026-05-22", "2026-05-29", "2026-06-05"],
+  "restaurants": [
+    {
+      "name": "Wright's Tavern",
+      "platform": "Resy",
+      "availability": [
+        {"date": "2026-05-22", "party": 2, "times": ["6:45 PM", "7:15 PM"], "booking_url": "https://resy.com/cities/clayton-mo/venues/wrights-tavern?date=2026-05-22&seats=2"}
+      ],
+      "notes": ""
+    }
+  ]
+}
+```
+If a restaurant has no availability, set `availability: []` and put any uncertainty in `notes` (e.g., "JS page did not render — check manually").
 
-**Output:** Report availability per restaurant. Flag time-sensitive openings. User is Cam.
+**Commit and push:**
+After writing the file, run:
+```
+git add latest-results.json
+git -c user.email="agent@stl-reservations" -c user.name="STL Reservations Agent" commit -m "weekly scan $(date -u +%Y-%m-%d)"
+git push origin main
+```
+
+**Email Cam if anything is open:**
+If any `availability[]` is non-empty, use the Gmail connector to send a message to cam.conway@gmail.com with subject `"STL Dinner — openings found"` and a body listing each opening with its booking URL. If everything is empty, do NOT email.
