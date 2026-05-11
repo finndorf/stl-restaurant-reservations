@@ -1,13 +1,43 @@
 {
-  "checked_at": null,
-  "scan_type": "init",
-  "fridays": [],
+  "checked_at": "2026-05-11T13:06:18Z",
+  "scan_type": "weekly",
+  "fridays": ["2026-05-15", "2026-05-22", "2026-05-29", "2026-06-05"],
   "restaurants": [
-    {"name": "Wright's Tavern", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
-    {"name": "Louie on DeMun", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
-    {"name": "The Mainlander", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
-    {"name": "Robin Restaurant", "platform": "Resy", "availability": [], "notes": "Awaiting first scan"},
-    {"name": "The Crossing", "platform": "OpenTable", "availability": [], "notes": "Awaiting first scan"},
-    {"name": "Acero", "platform": "OpenTable", "availability": [], "notes": "Awaiting first scan"}
+    {
+      "name": "Wright's Tavern",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Restaurant opens reservation books on the 1st of each month for the following month. Verify manually at https://resy.com/cities/clayton-mo/venues/wrights-tavern"
+    },
+    {
+      "name": "Louie on DeMun",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Verify manually at https://resy.com/cities/clyt/louie"
+    },
+    {
+      "name": "The Mainlander",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data. NOTE: Mainlander operates fixed seatings only at 6:00 PM and 8:30 PM Wed–Sat — neither falls within the 6:30–7:30 PM window. The Supper Club sells out almost instantly when reservations open. Verify manually at https://resy.com/cities/st-louis-mo/venues/mainlander"
+    },
+    {
+      "name": "Robin Restaurant",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Robin is a 30-seat restaurant that has been nearly impossible to book since being named to NYT 2025 America's Best Restaurants list. Verify manually at https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
+    },
+    {
+      "name": "The Crossing",
+      "platform": "OpenTable",
+      "availability": [],
+      "notes": "OpenTable returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Verify manually at https://www.opentable.com/the-crossing-clayton"
+    },
+    {
+      "name": "Acero",
+      "platform": "OpenTable",
+      "availability": [],
+      "notes": "OpenTable returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Verify manually at https://www.opentable.com/acero-saint-louis"
+    }
   ]
 }
