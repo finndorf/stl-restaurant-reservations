@@ -13,9 +13,9 @@ URL: https://resy.com/cities/st-louis-mo/venues/mainlander
 
 **Steps:**
 1. Identify the target month (the month that was just released). It is the 1st of THIS month, so the released month is the NEXT calendar month.
-2. List every Friday in that target month.
-3. For each Friday, check the venue page with `?date=YYYY-MM-DD&seats=2` and `&seats=4` query strings. Use WebFetch first; if the page returns shell HTML, fall back to WebSearch.
-4. Filter to 6:30 PM – 7:30 PM time window.
+2. List every Friday, Saturday, and Sunday in that target month.
+3. For each date, check the venue page with `?date=YYYY-MM-DD&seats=2` and `&seats=4` query strings. Use WebFetch first; if the page returns shell HTML, fall back to WebSearch.
+4. Time window: **6:00 PM – 7:30 PM** for Wright's Tavern. For The Mainlander, check the **6:00 PM fixed seating only** (it offers fixed seatings at 6:00 PM and 8:30 PM; 8:30 PM is out of scope). Note: The Mainlander may be closed Sundays — if no availability exists for Sunday, leave that date's availability empty.
 
 **Output — write `latest-results.json` at the repo root:**
 ```json
@@ -24,7 +24,7 @@ URL: https://resy.com/cities/st-louis-mo/venues/mainlander
   "scan_type": "monthly_drop",
   "venue": "Wright's Tavern",
   "target_month": "2026-07",
-  "fridays": ["2026-07-03", "2026-07-10", "2026-07-17", "2026-07-24", "2026-07-31"],
+  "dates": ["2026-07-03", "2026-07-04", "2026-07-05", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-17", "2026-07-18", "2026-07-19", "2026-07-24", "2026-07-25", "2026-07-26", "2026-07-31"],
   "restaurants": [
     {
       "name": "Wright's Tavern",
