@@ -1,9 +1,9 @@
 ---
 name: stl-friday-reservation-check
-description: Weekly check for Friday night openings at 6 St. Louis restaurants
+description: Weekly check for Wed–Sun evening openings at 6 St. Louis restaurants
 ---
 
-Check for Friday night dinner availability at 6 St. Louis restaurants. Look for a table for 2 or 4 people on any of the next 4 Fridays between 6:30 PM and 7:30 PM.
+Check for dinner availability at 6 St. Louis restaurants. Look for a table for 2 or 4 people on any of the next 2 weeks of Wednesday through Sunday evenings between 6:30 PM and 7:30 PM.
 
 **Restaurants:**
 1. Wright's Tavern (Resy): https://resy.com/cities/clayton-mo/venues/wrights-tavern
@@ -17,16 +17,16 @@ Check for Friday night dinner availability at 6 St. Louis restaurants. Look for 
 For each restaurant URL, use WebFetch and WebSearch to gather availability. Resy and OpenTable expose deep-link URLs that can be parameterized — for Resy, append `?date=YYYY-MM-DD&seats=2` (or `seats=4`). When WebFetch returns shell HTML, fall back to WebSearch with the venue name plus the target date and "available" to surface third-party indicators.
 
 **Criteria:**
-- Next 4 upcoming Fridays from today
+- The next 14 calendar days, filtered to Wednesday through Sunday only (roughly 10 nights)
 - Party of 2 first, then party of 4
 - Time window: 6:30 PM – 7:30 PM only
 
 **Output — write `latest-results.json` at the repo root with this exact shape:**
 ```json
 {
-  "checked_at": "2026-05-09T13:00:00Z",
+  "checked_at": "2026-05-19T13:00:00Z",
   "scan_type": "weekly",
-  "fridays": ["2026-05-15", "2026-05-22", "2026-05-29", "2026-06-05"],
+  "dates": ["2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-30", "2026-05-31"],
   "restaurants": [
     {
       "name": "Wright's Tavern",
