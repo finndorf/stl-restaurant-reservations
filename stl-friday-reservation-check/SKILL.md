@@ -19,7 +19,7 @@ For each restaurant URL, use WebFetch and WebSearch to gather availability. Resy
 **Criteria:**
 - The next 14 calendar days, filtered to Wednesday through Sunday only (roughly 10 nights)
 - Party of 2 first, then party of 4
-- Time window: 6:30 PM – 7:30 PM for all restaurants **except** The Mainlander
+- Time window: 6:00 PM – 7:30 PM for all restaurants **except** The Mainlander
 - The Mainlander exception: check for the **6:00 PM** seating only (it operates fixed seatings at 6:00 PM and 8:30 PM; 8:30 PM is outside scope)
 
 **Output — write `latest-results.json` at the repo root with this exact shape:**
