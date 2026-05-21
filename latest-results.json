@@ -1,8 +1,7 @@
 {
-  "checked_at": "2026-05-18T14:00:00Z",
+  "checked_at": "2026-05-21T13:14:49Z",
   "scan_type": "weekly",
   "dates": [
-    "2026-05-20",
     "2026-05-21",
     "2026-05-22",
     "2026-05-23",
@@ -11,44 +10,45 @@
     "2026-05-28",
     "2026-05-29",
     "2026-05-30",
-    "2026-05-31"
+    "2026-05-31",
+    "2026-06-03"
   ],
   "restaurants": [
     {
       "name": "Wright's Tavern",
       "platform": "Resy",
       "availability": [],
-      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data — verify manually at https://resy.com/cities/clayton-mo/venues/wrights-tavern"
+      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Mon–Sat dinner (5–10 PM weekdays, 5–11 PM Fri–Sat); closed Sundays — May 24 and May 31 not applicable. Typically requires ~1 month advance booking. Verify manually: https://resy.com/cities/clayton-mo/venues/wrights-tavern"
     },
     {
       "name": "Louie on DeMun",
       "platform": "Resy",
       "availability": [],
-      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data — verify manually at https://resy.com/cities/clyt/louie"
+      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Mon–Sat dinner (5–10 PM weekdays, 5–11 PM Fri–Sat); closed Sundays — May 24 and May 31 not applicable. Verify manually: https://resy.com/cities/clyt/louie"
     },
     {
       "name": "The Mainlander",
       "platform": "Resy",
       "availability": [],
-      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Operates Wed–Sat only; 6 PM fixed seating checked (8:30 PM excluded per scope). Sells out at noon on the 1st of each month — check for cancellations at https://resy.com/cities/st-louis-mo/venues/mainlander"
+      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Wed–Sat only with fixed seatings at 6:00 PM and 8:30 PM; 6:00 PM seating checked per scope (8:30 PM excluded). Reservations for each month open on the 1st at noon and sell out almost immediately — May 2026 seats are very likely fully booked. Sundays not applicable. Enable Resy Notify Me for cancellations: https://resy.com/cities/st-louis-mo/venues/mainlander"
     },
     {
       "name": "Robin Restaurant",
       "platform": "Resy",
       "availability": [],
-      "notes": "Resy returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Robin is a 30-seat tasting-menu restaurant reported as booked months out (NYT 2025 America's Best Restaurants list); 4 bar seats available walk-in Tue–Sat. Verify manually at https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
+      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Tue–Sat dinner (5–10 PM); closed Sundays — May 24 and May 31 not applicable. 2026 James Beard Award finalist for Best New Restaurant; named in NYT America's Best Restaurants 2025. Rolling 60-day Resy window; typically booked months out. Four bar walk-in seats are the best same-day option. Verify manually: https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
     },
     {
       "name": "The Crossing",
       "platform": "OpenTable",
       "availability": [],
-      "notes": "OpenTable returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Open Mon–Sat dinner 5–9 PM. Verify manually at https://www.opentable.com/the-crossing-clayton"
+      "notes": "OpenTable returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Mon–Sat dinner (5–9 PM); closed Sundays — May 24 and May 31 not applicable. Verify manually: https://www.opentable.com/the-crossing-clayton"
     },
     {
       "name": "Acero",
       "platform": "OpenTable",
       "availability": [],
-      "notes": "OpenTable returned HTTP 403 (bot block); WebSearch surfaced no live slot data. Open Tue–Sat dinner only (closed Sun/Mon); May 24 and May 31 (Sundays) not applicable. Verify manually at https://www.opentable.com/acero-saint-louis"
+      "notes": "OpenTable returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Tue–Sat dinner (5–9 PM weekdays, 5–10 PM Fri–Sat); closed Sundays and Mondays — May 24 and May 31 not applicable. Verify manually: https://www.opentable.com/acero-saint-louis"
     }
   ]
 }
