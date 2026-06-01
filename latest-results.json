@@ -1,54 +1,39 @@
 {
-  "checked_at": "2026-06-01T13:10:29Z",
-  "scan_type": "weekly",
+  "checked_at": "2026-06-01T17:00:00Z",
+  "scan_type": "monthly_drop",
+  "venue": "The Mainlander",
+  "target_month": "2026-07",
   "dates": [
-    "2026-06-03",
-    "2026-06-04",
-    "2026-06-05",
-    "2026-06-06",
-    "2026-06-07",
-    "2026-06-10",
-    "2026-06-11",
-    "2026-06-12",
-    "2026-06-13",
-    "2026-06-14"
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31"
   ],
   "restaurants": [
-    {
-      "name": "Wright's Tavern",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "partial render — verify manually. All WebFetch requests returned HTTP 403 (Resy bot protection); WebSearch fallback returned only generic listing page with no time-slot data. Visit https://resy.com/cities/clayton-mo/venues/wrights-tavern to check live availability."
-    },
-    {
-      "name": "Louie on DeMun",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "partial render — verify manually. All WebFetch requests returned HTTP 403 (Resy bot protection); WebSearch fallback returned only generic listing page with no time-slot data. Visit https://resy.com/cities/clyt/louie to check live availability."
-    },
     {
       "name": "The Mainlander",
       "platform": "Resy",
       "availability": [],
-      "notes": "partial render — verify manually. Fixed seatings at 6:00 PM and 8:30 PM; checked 6:00 PM seating only. All WebFetch requests returned HTTP 403 (Resy bot protection); WebSearch confirmed restaurant operates Wed–Sat but returned no per-date slot data. June 2026 reservations opened June 1 at noon. Visit https://resy.com/cities/st-louis-mo/venues/mainlander to check live availability."
-    },
-    {
-      "name": "Robin Restaurant",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "partial render — verify manually. All WebFetch requests returned HTTP 403 (Resy bot protection); WebSearch fallback returned only generic listing page with no time-slot data. Restaurant open Tue–Sat 5 PM–10 PM. Visit https://resy.com/cities/st-louis-mo/venues/robin-restaurant to check live availability."
-    },
-    {
-      "name": "The Crossing",
-      "platform": "OpenTable",
-      "availability": [],
-      "notes": "partial render — verify manually. All WebFetch requests returned HTTP 403 (OpenTable bot protection); WebSearch fallback returned only static listing pages with no real-time slot data. Note: The Crossing is closed Sundays (2026-06-07 and 2026-06-14 have no availability). Visit https://www.opentable.com/the-crossing-clayton to check live availability."
-    },
-    {
-      "name": "Acero",
-      "platform": "OpenTable",
-      "availability": [],
-      "notes": "partial render — verify manually. All WebFetch requests returned HTTP 403 (OpenTable bot protection); WebSearch fallback returned only static listing pages with no real-time slot data. Note: Acero is closed Sundays and Mondays (2026-06-07 and 2026-06-14 have no availability). Visit https://www.opentable.com/acero-saint-louis to check live availability."
+      "notes": "partial render — verify manually. All 46 WebFetch requests (23 dates × seats=2 and seats=4) returned HTTP 403 (Resy bot-protection); WebSearch fallback returned only generic Resy listing pages with no per-date time-slot data. Fixed seatings at 6:00 PM and 8:30 PM; only 6:00 PM seating was in scope. Sundays may have no service. Visit https://resy.com/cities/st-louis-mo/venues/mainlander to check and book directly — July 2026 slots released June 1 at noon and sell fast."
     }
   ]
 }
