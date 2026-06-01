@@ -1,54 +1,39 @@
 {
-  "checked_at": "2026-05-28T13:14:04Z",
-  "scan_type": "weekly",
+  "checked_at": "2026-06-01T12:00:00Z",
+  "scan_type": "monthly_drop",
+  "venue": "Wright's Tavern",
+  "target_month": "2026-07",
   "dates": [
-    "2026-05-28",
-    "2026-05-29",
-    "2026-05-30",
-    "2026-05-31",
-    "2026-06-03",
-    "2026-06-04",
-    "2026-06-05",
-    "2026-06-06",
-    "2026-06-07",
-    "2026-06-10"
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31"
   ],
   "restaurants": [
     {
       "name": "Wright's Tavern",
       "platform": "Resy",
       "availability": [],
-      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Mon–Sat dinner (5–10 PM weekdays, 5–11 PM Fri–Sat); closed Sundays — May 31 and Jun 7 not applicable. Typically requires ~1 month advance booking. Verify manually: https://resy.com/cities/clayton-mo/venues/wrights-tavern?date=YYYY-MM-DD&seats=2"
-    },
-    {
-      "name": "Louie on DeMun",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Mon–Sat dinner (5–10 PM weekdays, 5–11 PM Fri–Sat); closed Sundays — May 31 and Jun 7 not applicable. Verify manually: https://resy.com/cities/clyt/louie?date=YYYY-MM-DD&seats=2"
-    },
-    {
-      "name": "The Mainlander",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Wed–Sat only with fixed seatings at 6:00 PM and 8:30 PM; only 6:00 PM seating checked per scope (8:30 PM excluded). Sundays not applicable (May 31, Jun 7). Reservations open on the 1st of each month at noon and sell out quickly — enable Resy Notify Me for cancellations. Verify manually: https://resy.com/cities/st-louis-mo/venues/mainlander?date=YYYY-MM-DD&seats=2"
-    },
-    {
-      "name": "Robin Restaurant",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "Resy returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Tue–Sat dinner (5–10 PM); closed Sundays — May 31 and Jun 7 not applicable. Rolling 60-day Resy window; typically booked months out (2026 James Beard finalist). Four bar walk-in seats are the best same-day option. Verify manually: https://resy.com/cities/st-louis-mo/venues/robin-restaurant?date=YYYY-MM-DD&seats=2"
-    },
-    {
-      "name": "The Crossing",
-      "platform": "OpenTable",
-      "availability": [],
-      "notes": "OpenTable returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Mon–Sat dinner (5–9 PM); closed Sundays — May 31 and Jun 7 not applicable. Verify manually: https://www.opentable.com/the-crossing-clayton?covers=2&dateTime=YYYY-MM-DDT18:00"
-    },
-    {
-      "name": "Acero",
-      "platform": "OpenTable",
-      "availability": [],
-      "notes": "OpenTable returned HTTP 403 (bot-blocked) on all parameterized URL attempts; WebSearch fallback returned no slot-level data. Open Tue–Thu dinner 5–9 PM, Fri–Sat 5–10 PM; closed Sundays and Mondays — May 31 and Jun 7 not applicable. Verify manually: https://www.opentable.com/acero-saint-louis?covers=2&dateTime=YYYY-MM-DDT18:00"
+      "notes": "Resy returned HTTP 403 (bot-blocked) on all WebFetch attempts for venue page and API endpoints; WebSearch fallback returned no slot-level data — only static venue info. Availability could not be confirmed programmatically. Restaurant is closed Sundays (Jul 5, 12, 19, 26 not applicable); open Mon–Sat dinner 5–10 PM weekdays, 5–11 PM Fri–Sat. CHECK MANUALLY NOW — July drop sells out within minutes: https://resy.com/cities/clayton-mo/venues/wrights-tavern?date=2026-07-04&seats=2"
     }
   ]
 }
