@@ -51,4 +51,4 @@ git push origin main
 ```
 
 **Email Cam if anything is open:**
-If any `availability[]` is non-empty, use the Gmail connector to send a message to cam.conway@gmail.com with subject `"STL Dinner — openings found"` and a body listing each opening with its booking URL. If everything is empty, do NOT email.
+If any `availability[]` is non-empty, use the Gmail connector to send a message to `$RECIPIENT_EMAIL` (configure this in your routine's environment) with subject `"STL Dinner — openings found"` and a body listing each opening with its booking URL. If everything is empty, do NOT email.

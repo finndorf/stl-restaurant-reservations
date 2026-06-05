@@ -46,6 +46,6 @@ git push origin main
 ```
 
 **Email Cam IMMEDIATELY if any availability is found:**
-Use the Gmail connector. Send to cam.conway@gmail.com with subject `"🚨 <Venue> — book now"` and a plain-text body listing each open Friday with its `booking_url`. Urgency is the whole point — these sell out in minutes.
+Use the Gmail connector. Send to `$RECIPIENT_EMAIL` (configure this in your routine's environment) with subject `"🚨 <Venue> — book now"` and a plain-text body listing each open Friday with its `booking_url`. Urgency is the whole point — these sell out in minutes.
 
 If nothing is open: still write the JSON file with empty `availability`, but do NOT email.

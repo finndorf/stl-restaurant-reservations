@@ -30,7 +30,7 @@ Automated Wed–Sun dinner reservation checker for 6 St. Louis restaurants. Runs
 | Wright's drop | 1st of month, 7:00 AM | Wright's Tavern only, newly released month |
 | Mainlander drop | 1st of month, noon | The Mainlander only, newly released month |
 
-Each routine writes `latest-results.json` to the repo root and emails `cam.conway@gmail.com` if anything is open. Monthly drop routines include urgency context — Wright's (14 tables) and Mainlander (25 Supper Club seats) sell out within minutes of release.
+Each routine writes `latest-results.json` to the repo root and emails the configured recipient if anything is open. Monthly drop routines include urgency context — Wright's (14 tables) and Mainlander (25 Supper Club seats) sell out within minutes of release.
 
 ## Files
 
