@@ -1,6 +1,8 @@
 {
   "checked_at": "2026-06-04T18:00:00Z",
   "scan_type": "weekly",
+  "scraper_status": "ALL_BLOCKED",
+  "scraper_status_note": "Scraper blocked by all platforms — manual check required. HTTP 403 returned on every fetch (both Resy and OpenTable). No availability data is reliable.",
   "dates": [
     "2026-06-05",
     "2026-06-06",
@@ -18,37 +20,37 @@
       "name": "Wright's Tavern",
       "platform": "Resy",
       "availability": [],
-      "notes": "partial render — verify manually. HTTP 403 on all Resy fetches; WebSearch returned no slot-level data. Closed Sundays (Jun 7, Jun 14 have no service). Check at https://resy.com/cities/clayton-mo/venues/wrights-tavern"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/clayton-mo/venues/wrights-tavern . Note: closed Sundays (Jun 7, Jun 14 have no service)."
     },
     {
       "name": "Louie on DeMun",
       "platform": "Resy",
       "availability": [],
-      "notes": "partial render — verify manually. HTTP 403 on all Resy fetches; WebSearch returned no slot-level data. Check at https://resy.com/cities/clyt/louie"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/clyt/louie"
     },
     {
       "name": "The Mainlander",
       "platform": "Resy",
       "availability": [],
-      "notes": "partial render — verify manually. HTTP 403 on all Resy fetches. WebSearch indicates June 2026 fully booked; next reported availability July 3 2026. Closed Sundays (Jun 7, Jun 14). 6:00 PM seating only checked (8:30 PM excluded). Check at https://resy.com/cities/st-louis-mo/venues/mainlander"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander . WebSearch suggests June 2026 fully booked; next reported availability July 3 2026. Closed Sundays (Jun 7, Jun 14). 6:00 PM seating only in scope."
     },
     {
       "name": "Robin Restaurant",
       "platform": "Resy",
       "availability": [],
-      "notes": "partial render — verify manually. HTTP 403 on all Resy fetches; WebSearch returned no slot-level data. Check at https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
     },
     {
       "name": "The Crossing",
       "platform": "OpenTable",
       "availability": [],
-      "notes": "partial render — verify manually. HTTP 403 on all OpenTable fetches; WebSearch returned no slot-level data. Dinner Mon–Sat only (Jun 7, Jun 14 likely closed). Check at https://www.opentable.com/the-crossing-clayton"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/the-crossing-clayton . Dinner Mon–Sat only (Jun 7, Jun 14 likely closed)."
     },
     {
       "name": "Acero",
       "platform": "OpenTable",
       "availability": [],
-      "notes": "partial render — verify manually. HTTP 403 on all OpenTable fetches; WebSearch returned no slot-level data. Check at https://www.opentable.com/acero-saint-louis"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis"
     }
   ]
 }

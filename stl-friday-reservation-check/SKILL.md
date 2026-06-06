@@ -16,6 +16,13 @@ Check for dinner availability at 6 St. Louis restaurants. Look for a table for 2
 **How to check:**
 For each restaurant URL, use WebFetch and WebSearch to gather availability. Resy and OpenTable expose deep-link URLs that can be parameterized — for Resy, append `?date=YYYY-MM-DD&seats=2` (or `seats=4`). When WebFetch returns shell HTML, fall back to WebSearch with the venue name plus the target date and "available" to surface third-party indicators.
 
+**403 handling — when a fetch is blocked:**
+If any fetch returns HTTP 403 for a restaurant, log it clearly:
+`[BLOCKED] <restaurant name> on <platform>: HTTP 403 — scrape failed, manual check required`
+In the output JSON, set `availability: []` and write the notes field as:
+`"BLOCKED: HTTP 403 — automated fetch rejected by <platform>. Manual check required: <booking URL>"`
+Always include the direct booking URL in the notes so the human can navigate there with one click.
+
 **Criteria:**
 - The next 14 calendar days, filtered to Wednesday through Sunday only (roughly 10 nights)
 - Party of 2 first, then party of 4
@@ -52,3 +59,18 @@ git push origin main
 
 **Email Cam if anything is open:**
 If any `availability[]` is non-empty, use the Gmail connector to send a message to `$RECIPIENT_EMAIL` (configure this in your routine's environment) with subject `"STL Dinner — openings found"` and a body listing each opening with its booking URL. If everything is empty, do NOT email.
+
+**All-blocked fallback:**
+Before deciding whether to email, check if EVERY restaurant has a `notes` field starting with `"BLOCKED: HTTP 403"`. If all restaurants are blocked (i.e., not a single restaurant returned real data), send a single alert email with subject `"STL Dinner — scraper blocked, manual check required"` and a body that says:
+
+> All 6 restaurants were blocked by HTTP 403 this scan — no availability data is available.
+> The scraper cannot reach Resy or OpenTable right now. Please check each restaurant manually:
+>
+> - Wright's Tavern (Resy): https://resy.com/cities/clayton-mo/venues/wrights-tavern
+> - Louie on DeMun (Resy): https://resy.com/cities/clyt/louie
+> - The Mainlander (Resy): https://resy.com/cities/st-louis-mo/venues/mainlander
+> - Robin Restaurant (Resy): https://resy.com/cities/st-louis-mo/venues/robin-restaurant
+> - The Crossing (OpenTable): https://www.opentable.com/the-crossing-clayton
+> - Acero (OpenTable): https://www.opentable.com/acero-saint-louis
+
+Do NOT send an empty availability report without this notice — an email with six empty arrays and no explanation is not useful.

@@ -17,6 +17,19 @@ URL: https://resy.com/cities/st-louis-mo/venues/mainlander
 3. For each date, check the venue page with `?date=YYYY-MM-DD&seats=2` and `&seats=4` query strings. Use WebFetch first; if the page returns shell HTML, fall back to WebSearch.
 4. Time window: **6:00 PM – 7:30 PM** for Wright's Tavern. For The Mainlander, check the **6:00 PM fixed seating only** (it offers fixed seatings at 6:00 PM and 8:30 PM; 8:30 PM is out of scope). Note: The Mainlander may be closed Sundays — if no availability exists for Sunday, leave that date's availability empty.
 
+**403 handling — when the fetch is blocked:**
+If any fetch returns HTTP 403, log it:
+`[BLOCKED] <venue name> on Resy: HTTP 403 — scrape failed, manual check required`
+Set `availability: []` and notes: `"BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: <venue URL>"`
+
+If the venue is completely blocked (ALL date fetches return 403), send the alert email with subject `"🚨 <Venue> — BLOCKED, book manually"` and body:
+
+> The monthly drop check for <Venue> was blocked by HTTP 403 — no availability data was retrieved.
+> These reservations sell out in minutes. Check manually now:
+> <venue URL>
+
+Do NOT send an empty availability email without this notice.
+
 **Output — write `latest-results.json` at the repo root:**
 ```json
 {

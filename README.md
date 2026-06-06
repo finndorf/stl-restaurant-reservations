@@ -2,6 +2,13 @@
 
 Automated Wed–Sun dinner reservation checker for 6 St. Louis restaurants. Runs as scheduled remote Claude Code routines that scan availability, write results to `latest-results.json`, and email Cam when openings appear. Results are also rendered in the [cam-dashboard](https://github.com/finndorf/cam-dashboard) `/dinner` page.
 
+## ⚠️ Terms of Service Notice
+
+This tool automates fetching from Resy and OpenTable. Both platforms' Terms of Service
+prohibit automated access. Use at your own risk. As of June 2026, both platforms are
+returning HTTP 403 on automated requests, meaning scraping is actively being blocked.
+Consider using official reservation APIs or manual checking instead.
+
 ## Restaurants Tracked
 
 | Restaurant | Platform | Reservation Release |
