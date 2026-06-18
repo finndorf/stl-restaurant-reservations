@@ -1,11 +1,9 @@
 {
-  "checked_at": "2026-06-15T00:00:00Z",
+  "checked_at": "2026-06-18T12:00:00Z",
   "scan_type": "weekly",
   "scraper_status": "ALL_BLOCKED",
   "scraper_status_note": "Scraper blocked by all platforms — manual check required. HTTP 403 returned on every fetch (both Resy and OpenTable). No availability data is reliable.",
   "dates": [
-    "2026-06-17",
-    "2026-06-18",
     "2026-06-19",
     "2026-06-20",
     "2026-06-21",
@@ -13,7 +11,9 @@
     "2026-06-25",
     "2026-06-26",
     "2026-06-27",
-    "2026-06-28"
+    "2026-06-28",
+    "2026-07-01",
+    "2026-07-02"
   ],
   "restaurants": [
     {
@@ -38,7 +38,7 @@
       "name": "Robin Restaurant",
       "platform": "Resy",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/robin-restaurant (open Tue–Sat; reservations typically booked months out — check for cancellations)"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
     },
     {
       "name": "The Crossing",
@@ -50,7 +50,7 @@
       "name": "Acero",
       "platform": "OpenTable",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis (closed Sun & Mon — skip Jun 21 & Jun 28)"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis"
     }
   ]
 }
