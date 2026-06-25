@@ -1,11 +1,9 @@
 {
-  "checked_at": "2026-06-22T13:05:16Z",
+  "checked_at": "2026-06-25T13:06:41Z",
   "scan_type": "weekly",
   "scraper_status": "ALL_BLOCKED",
   "scraper_status_note": "Scraper blocked by all platforms — manual check required. HTTP 403 returned on every fetch (both Resy and OpenTable). No availability data is reliable.",
   "dates": [
-    "2026-06-24",
-    "2026-06-25",
     "2026-06-26",
     "2026-06-27",
     "2026-06-28",
@@ -13,7 +11,9 @@
     "2026-07-02",
     "2026-07-03",
     "2026-07-04",
-    "2026-07-05"
+    "2026-07-05",
+    "2026-07-08",
+    "2026-07-09"
   ],
   "restaurants": [
     {
@@ -32,7 +32,7 @@
       "name": "The Mainlander",
       "platform": "Resy",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander (6:00 PM seating only in scope; operates Wed–Sat)"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander (6:00 PM seating only in scope)"
     },
     {
       "name": "Robin Restaurant",
