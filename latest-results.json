@@ -1,56 +1,38 @@
 {
-  "checked_at": "2026-06-29T13:06:15Z",
-  "scan_type": "weekly",
-  "scraper_status": "ALL_BLOCKED",
-  "scraper_status_note": "Scraper blocked by all platforms — manual check required. HTTP 403 returned on every fetch (both Resy and OpenTable). No availability data is reliable.",
+  "checked_at": "2026-07-01T12:00:00Z",
+  "scan_type": "monthly_drop",
+  "venue": "Wright's Tavern",
+  "target_month": "2026-08",
   "dates": [
-    "2026-07-01",
-    "2026-07-02",
-    "2026-07-03",
-    "2026-07-04",
-    "2026-07-05",
-    "2026-07-08",
-    "2026-07-09",
-    "2026-07-10",
-    "2026-07-11",
-    "2026-07-12"
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-22",
+    "2026-08-23",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30"
   ],
   "restaurants": [
     {
       "name": "Wright's Tavern",
       "platform": "Resy",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/clayton-mo/venues/wrights-tavern"
-    },
-    {
-      "name": "Louie on DeMun",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/clyt/louie"
-    },
-    {
-      "name": "The Mainlander",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander (6:00 PM seating only in scope)"
-    },
-    {
-      "name": "Robin Restaurant",
-      "platform": "Resy",
-      "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/robin-restaurant"
-    },
-    {
-      "name": "The Crossing",
-      "platform": "OpenTable",
-      "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/the-crossing-clayton"
-    },
-    {
-      "name": "Acero",
-      "platform": "OpenTable",
-      "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy on all 44 requests (22 dates × seats=2 and seats=4). WebSearch fallback returned no real-time availability data. Manual check required: https://resy.com/cities/clayton-mo/venues/wrights-tavern"
     }
   ]
 }
