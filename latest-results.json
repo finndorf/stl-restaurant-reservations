@@ -1,17 +1,17 @@
 {
-  "checked_at": "2026-07-09T12:00:00Z",
+  "checked_at": "2026-07-13T13:12:15Z",
   "scan_type": "weekly",
   "dates": [
-    "2026-07-10",
-    "2026-07-11",
-    "2026-07-12",
     "2026-07-15",
     "2026-07-16",
     "2026-07-17",
     "2026-07-18",
     "2026-07-19",
     "2026-07-22",
-    "2026-07-23"
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26"
   ],
   "restaurants": [
     {
@@ -30,7 +30,7 @@
       "name": "The Mainlander",
       "platform": "Resy",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander (6:00 PM seating only; operates Wed–Sat with fixed seatings at 6:00 PM and 8:30 PM)"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander (6:00 PM seating only)"
     },
     {
       "name": "Robin Restaurant",
@@ -48,7 +48,7 @@
       "name": "Acero",
       "platform": "OpenTable",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis (WebSearch indicates closed Mon & Sun; open Tue–Sat)"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis"
     }
   ]
 }
