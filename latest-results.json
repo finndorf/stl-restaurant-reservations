@@ -1,21 +1,54 @@
 {
-  "checked_at": "2026-08-01T17:00:00Z",
-  "scan_type": "monthly_drop",
-  "venue": "The Mainlander",
-  "target_month": "2026-09",
+  "checked_at": "2026-08-03T13:13:48Z",
+  "scan_type": "weekly",
   "dates": [
-    "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-05", "2026-09-06",
-    "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13",
-    "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20",
-    "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27",
-    "2026-09-30"
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16"
   ],
   "restaurants": [
+    {
+      "name": "Wright's Tavern",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/clayton-mo/venues/wrights-tavern — Note: restaurant is closed Sundays; scan dates Aug 9 and Aug 16 are not applicable."
+    },
+    {
+      "name": "Louie on DeMun",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/clyt/louie"
+    },
     {
       "name": "The Mainlander",
       "platform": "Resy",
       "availability": [],
-      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy on all 8 requests tested (4 dates × seats=2 and seats=4). Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander"
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/mainlander — Note: Wed–Sat only, 6:00 PM seating. Reservations for August opened on Resy August 1 at noon."
+    },
+    {
+      "name": "Robin Restaurant",
+      "platform": "Resy",
+      "availability": [],
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by Resy. Manual check required: https://resy.com/cities/st-louis-mo/venues/robin-restaurant — Note: open Tue–Sat only; scan dates Aug 9 and Aug 16 (Sunday) are not applicable."
+    },
+    {
+      "name": "The Crossing",
+      "platform": "OpenTable",
+      "availability": [],
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/the-crossing-clayton — Note: open Mon–Sat for dinner; scan dates Aug 9 and Aug 16 (Sunday) are not applicable."
+    },
+    {
+      "name": "Acero",
+      "platform": "OpenTable",
+      "availability": [],
+      "notes": "BLOCKED: HTTP 403 — automated fetch rejected by OpenTable. Manual check required: https://www.opentable.com/acero-saint-louis — Note: open Tue–Sat only; scan dates Aug 9 and Aug 16 (Sunday) are not applicable."
     }
   ]
 }
